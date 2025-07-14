@@ -49,7 +49,23 @@ Cách cài đặt(ubuntu):
   4. Cài script và model
 
   ```wget https://raw.githubusercontent.com/J4FSec/In0ri/main/final_model.h5```
-  ```a```
+  ```wget https://raw.githubusercontent.com/Sskadii1/Web-deface-detect/main/checker.py```
+
+  5. Config các đường dẫn trong Checker.py
+
+        ```#path đến model
+      MODEL_PATH = "path/final_model.h5" 
+      
+      #path đến chỗ lưu screenshot
+      SCREENSHOT_DIR = "/home/linh/defe/screenshot" **
+      
+      #path đến chỗ lưu LOG
+      LOG_PATH = "/home/linh/defe/log-deface.json"
+      
+      #Link bạn muốn chụp vd:
+      URL = "https://www.google.com"```
+
+  6. Sau khi config xong, mở terminal trong file có tệp Checker.py và chạy
 
 
 

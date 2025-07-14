@@ -22,10 +22,18 @@ Cách cài đặt(ubuntu):
   2. Cài đặt trình duyệt Google Chrome ở trạng thái Headless
      ```sudo apt install google-chrome-stable```
 
+  Thư viện liên quan đến headless rendering
+          ```sudo apt install -y fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 \
+          libatk1.0-0 libcups2 libdbus-1-3 libgdk-pixbuf2.0-0 libnspr4 libnss3 libx11-xcb1 \
+          libxcomposite1 libxdamage1 libxrandr2 xdg-utils```
+
     Trong trường hợp ubuntu của bạn sử dụng ubuntu GUI:
       '''sudo apt install -y python3-dev build-essential libssl-dev libffi-dev \
           libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev \
           libfreetype6-dev libpng-dev'''
+
+      **Nếu Chrome bị block bởi AppArmor hoặc SELinux, bạn cần cấu hình lại security policy**
+
   3. Kiểm tra môi trường cài 
     Xác minh phiên bản TensorFlow:
     ```python3 -c "import tensorflow as tf; print(tf.__version__)"```

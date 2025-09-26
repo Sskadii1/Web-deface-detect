@@ -7,6 +7,18 @@ Nhận diện kịp thời các biến đổi bất thường trong giao diện 
 Tự động ghi nhận và lưu trữ nhật ký chi tiết của từng phiên kiểm tra, bao gồm thời gian, địa chỉ URL, kết quả phân tích và mức độ tin cậy, phục vụ công tác phân tích sự kiện và truy vết sự cố.
 Dễ dàng tích hợp vào các hệ thống giám sát an ninh hiện hữu, hỗ trợ triển khai linh hoạt trong môi trường thực tế và nâng cao hiệu quả giám sát liên tục.
 
+Các bước sử dụng
+Thu thập giao diện người dùng:
+Sử dụng trình duyệt Google Chrome ở chế độ Headless để tự động chụp ảnh màn hình giao diện hiện tại của website mục tiêu, đảm bảo quá trình giám sát không gây ảnh hưởng đến hoạt động thực tế của người dùng.
+Xử lý và chuẩn hóa hình ảnh:
+Ảnh chụp được resize về kích thước chuẩn (pixel), sau đó trải qua các bước tiền xử lý (preprocessing) nhằm đưa về định dạng phù hợp cho mô hình học sâu.
+Dự đoán trạng thái website:
+Hình ảnh đã xử lý được đưa vào mô hình học sâu huấn luyện sẵn (Deep Learning model) để phân loại trạng thái giao diện thành hai nhóm:
+normal: website vẫn hoạt động bình thường
+defaced: có dấu hiệu bị thay đổi trái phép
+Ghi nhận và lưu trữ kết quả:
+Kết quả phân tích được ghi lại trong một tệp log định dạng JSON, bao gồm các thông tin: thời điểm kiểm tra (timestamp), địa chỉ URL, trạng thái phân loại, độ tin cậy (confidence) và tên ảnh minh họa tương ứng. Log này có thể phục vụ cho việc giám sát, truy vết và điều tra sự cố sau này.
+
   Bao gồm:
     Tensorflow
     Numpy

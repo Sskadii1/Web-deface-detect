@@ -1,5 +1,5 @@
 # Web-deface-detect
-Lấy cảm hứng từ J4FSec, họ đã tạo ra một dạng model detect khá mạnh, tuy nhiên tôi muốn triển khai trên ubuntu CLI.
+Lấy cảm hứng từ các đợt tấn công từ iran,iraq, palestine, họ đã liên tục tạo ra các webdefacement.
 Trong dự án này, tôi muốn tập trung vào phát hiện website defacement bằng cách kết hợp công nghệ học sâu (Deep Learning) với  trình duyệt Headless Chrome. 
 
 Mục đích dự án 
@@ -13,7 +13,7 @@ Dễ dàng tích hợp vào các hệ thống giám sát an ninh hiện hữu, h
     Pillow
     Requests
     Chrome(headless)
-    sequential_3 (Total params: 7,896,869) **https://github.com/J4FSec/Shu**
+    sequential_3 (Total params: 7,896,869)
 
 Cách cài đặt(ubuntu): 
   
